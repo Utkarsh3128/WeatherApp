@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-pink-400">
+
+    <div class="w-[400px] h-[105px] bg-[#feffff] rounded-[18px] relative py-[28px] px-[32px] overflow-hidden container">
+
+        <div class="flex items-center justify-between w-full h-min search-box">
+            <i class="absolute text-[28px] text-[#000000] fa-solid fa-location-dot"></i>
+            <input type="text" name="location" id="" placeholder="Enter Your Location"
+                class="w-[80%] text-[20px] font-[500] pl-[32px] uppercase border-[1px] border-[black]" />
+            <button
+                class="w-[50px] h-[50px] text-[22px] text-[#050505] rounded-[50%] bg-[#dff6ff] cursor-pointer fa-solid fa-magnifying-glass"> 
+            </button>
+        </div>
+
+        <div class="w-full text-center mt-[50px] hidden error">
+            <img src="images/error.png" alt="error_msg" class="w-[70%] mx-auto" />
+            <p class="text-[22px] font-medium mt-[12px] text-[#06283D]">
+                Invalid Location!
+            </p>
+        </div>
+
+        <div class="text-center weather-box">
+            <img src="" alt="" class="w-[60%] mt-[30px] mx-auto" />
+            <p class="text-[4rem] font-[800] mt-[30px] text-[#06283D] relative temperature"></p>
+            <p class="text-[22px] capitalize font-medium text-[#06283D] description"></p>
+        </div>
+
+        <div class="flex justify-between mt-[15px] w-full weather-details">
+            <div class="flex items-center justify-start pl-[20px] w-[50%] h-[100px] humidity">
+                <i class="text-[#06283D] mt-[6px] mr-[10px] fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p class="text-[#06283D] text-[14px] font-medium">Humidity</p>
+                </div>
+            </div>
+
+            <div class="flex items-center w-[50%] h-[100px] justify-end pr-[20px] text-[#06283D] wind">
+                <i class="text-[#06283D] mt-[6px] mr-[10px] fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p class="text-[#06283D] text-[14px] font-medium">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/909712bb94.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
