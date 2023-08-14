@@ -13,7 +13,7 @@ search.addEventListener("click", () => {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
   )
-    .then((response) => response.json())
+    .then((response) => response.json()) // this is the raw data and we have to convert into readable format
     .then((json) => {
       if (json.cod === "404") {
         container.style.height = "400px";
