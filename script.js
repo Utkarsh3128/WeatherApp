@@ -15,7 +15,7 @@ search.addEventListener("click", () => {
   )
     .then((response) => response.json()) // this is the raw data and we have to convert into readable format
     .then((json) => {
-      if (json.cod === "404") {
+      if (json.cod === "404") { 
         container.style.height = "400px";
         weather.style.display = "none";
         details.style.display = "none";
